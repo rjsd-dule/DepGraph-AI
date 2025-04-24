@@ -1,37 +1,37 @@
 # DepGraph-AI
 
-DepGraph-AI es una herramienta que analiza automáticamente las dependencias entre archivos de código Python y genera documentación inteligente utilizando modelos de lenguaje (LLMs). Perfecta para refactorizar, incorporar nuevos desarrolladores o detectar código frágil.
+DepGraph-AI is a tool that automatically analyzes dependencies between Python code files and generates intelligent documentation using language models (LLMs). It is ideal for refactoring, onboarding new developers, or detecting fragile code. Currently, as a development version, it is focused solely on reviewing code with the .py extension.
 
-- Usa IA para explicar funciones.
-- Identifica dependencias internas y externas.
-- Genera gráficos de relaciones automáticos.
-- Exporta resultados en JSON para análisis posterior.
+- Uses AI to explain functions.
+- Identifies internal and external dependencies.
+- Generates automatic relationship graphs.
+- Exports results in JSON for further analysis.
 
 ---
 
-## Parte de la Estructura del Proyecto
+## Part of the Project Structure
 
 ```
 DepGraph-AI/
-├── analyserCode/               # Carpeta con los archivos de código a analizar
+├── analyserCode/               # Folder with the code files to be analyzed
 ├── LLM_model/
-│   └── run_analysis.py         # Ejecuta el análisis con un modelo LLM
-├── patrones.py                 # Define patrones a buscar en el código
-├── alldef.py                   # Funciones auxiliares para procesar archivos
-├── outputConsole.py            # Muestra resultados mejorados por consola
-├── guardar_resultados.py       # Guarda resultados por archivo en JSON
-├── graph.py                    # Genera grafo visual con NetworkX
-├── main.py                     # Punto de entrada de la aplicación
-├── resultados/                 # Salida por archivo individual
-├── resultados_dependencias/    # Salida general del análisis y grafo
-└── requirements.txt            # Requisitos del entorno Python
+│   └── run_analysis.py         # Runs the analysis with an LLM model
+├── patrones.py                 # Defines patterns to look for in the code
+├── alldef.py                   # Helper functions to process files
+├── outputConsole.py            # Displays enhanced results in the console
+├── guardar_resultados.py       # Saves results to a JSON file
+├── graph.py                    # Generates a visual graph with NetworkX
+├── main.py                     # Entry point of the application
+├── resultados/                 # Output for individual files
+├── resultados_dependencias/    # General output of analysis and graph
+└── requirements.txt            # Python environment requirements
 ```
 
 ---
 
 ## Instalación y Requisitos
 
-Requiere **Python 3.8+**. Para instalar todas las dependencias necesarias:
+Requiere **Python 3.8+**. To install all the necessary dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -39,64 +39,64 @@ pip install -r requirements.txt
 
 ### Dependencias utilizadas:
 
-#### Análisis y visualización:
-- **networkx** – para construir el grafo de dependencias internas entre archivos.
-- **matplotlib** – para mostrar y guardar el grafo como imagen (`.png`).
+#### Analysis and Visualization:
+- **networkx** – for building the graph of internal dependencies between files.
+- **matplotlib** – for displaying and saving the graph as an image (.png).
 
-#### Modelos de Lenguaje (LLMs con Gemini/Google AI):
-- **langchain-core==0.3.55** – núcleo para orquestación de cadenas de procesos.
-- **langchain==0.1.20** – versión completa de LangChain con utilidades y abstracciones.
-- **langchain-google-genai==2.1.3** – integración de LangChain con Gemini (Google Generative AI).
-- **google-generativeai==0.8.5** – cliente oficial para usar Gemini directamente desde Python.
-- **google-ai-generativelanguage==0.6.16** – APIs base de Google AI para modelos de lenguaje.
+#### Language Models (LLMs with Gemini/Google AI):
+- **langchain-core==0.3.55** – core for orchestrating process chains.
+- **langchain==0.1.20** –  full version of LangChain with utilities and abstractions.
+- **langchain-google-genai==2.1.3** – LangChain integration with Gemini (Google Generative AI).
+- **google-generativeai==0.8.5** – official client for using Gemini directly from Python.
+- **google-ai-generativelanguage==0.6.16** –  base APIs from Google AI for language models.
 
-Estas librerías permiten analizar las funciones del código fuente utilizando IA para generar explicaciones automáticas.
+These libraries allow for analyzing source code functions using AI to generate automatic explanations.
 
 ---
 
-## Cómo Ejecutarlo
+## How to Run It
 
-1. Colocá tus archivos `.py` dentro de `analyserCode/`.
-2. Ejecutá el análisis:
+1. Place the `.py` files you want to analyze inside the `analyserCode/` folder.
+2. Run the analysis:
 
 ```bash
 python main.py
 ```
 
-3. El programa:
-   - Analiza todas las importaciones entre archivos.
-   - Separa las dependencias internas (del proyecto) de las externas (librerías).
-   - Genera un archivo `dependencias.json`.
-   - Visualiza un grafo de dependencias internas.
-   - Usa un modelo LLM para explicar las funciones encontradas.
+3. The program:
+   - Analyzes all imports between files.
+   - Separates internal dependencies (within the project) from external dependencies (libraries).
+   - Generates a `dependencias.json` file.
+   - Displays a graph of internal dependencies.
+   - Uses an LLM model to explain the functions found.
 
 ---
 
-## Vista del Grafo de Dependencias
+## Dependency Graph View
 
-> Inserta aquí una imagen del archivo `resultados_dependencias/dependencias_internas.png` generado por `matplotlib`.
+> Code dependency graph.
 
-![Grafo de dependencias](resultados_dependencias/dependencias_internas.png)
+![Grafo de dependencias](img/graficaIA.png)
 
 ---
 
 ## Vista del Análisis con LLM
 
-> Inserta aquí una imagen (screenshot) del resultado generado por el análisis con IA, por ejemplo, el resumen de una función o el output en consola/JSON.
+> Sample of the file analysis by the LLM model. The code analysis process begins when the graph is closed. Once the analysis is completed, the result is saved in an .md file at the root of the project, named finalanalysis.md
 
-![Ejemplo de análisis con LLM](ruta/a/ejemplo_llm.png)
+![Ejemplo de análisis con LLM](img/model_outPut.png)
 
 ---
 
-## Resultados Exportados
+## Exported Results
 
-- `resultados/[archivo].json` → resultados individuales.
-- `resultados_dependencias/dependencias.json` → resumen general.
-- Visualización de dependencias con NetworkX y Matplotlib.
+- `resultados/[archivo].json` → individual results.
+- `resultados_dependencias/dependencias.json` → general summary.
+- Dependency visualization with NetworkX and Matplotlib.
 
 ---
 
 ## Personalización
 
-- Modificá `patrones.py` para agregar nuevas reglas de análisis.
-- Personalizá el comportamiento del modelo de lenguaje desde `LLM_model/run_analysis.py`.
+- Modify `patrones.py` to add new analysis rules without implementation.
+- Customize the behavior of the language model from `LLM_model/run_analysis.py`.

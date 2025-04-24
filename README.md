@@ -76,7 +76,7 @@ python main.py
 
 > Code dependency graph.
 
-![Grafo de dependencias](img/graficaIA.png)
+![Grafo de dependencias](img/grafo.png)
 
 ---
 
@@ -84,7 +84,7 @@ python main.py
 
 > Sample of the file analysis by the LLM model. The code analysis process begins when the graph is closed. Once the analysis is completed, the result is saved in an .md file at the root of the project, named finalanalysis.md
 
-![Ejemplo de análisis con LLM](img/model_outPut.png)
+![Ejemplo de análisis con LLM](img/modelOutPut.png)
 
 ---
 

@@ -1,0 +1,13 @@
+{
+    "importaciones": [
+        "os",
+        "json"
+    ],
+    "exportaciones": {
+        "funciones": [
+            "guardar_resultados"
+        ],
+        "clases": [],
+        "variables": []
+    }
+}

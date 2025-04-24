@@ -1,0 +1,47 @@
+{
+    "dependencias_internas": {
+        "alldef": [
+            "patrones"
+        ],
+        "graph": [],
+        "guardar_resultados": [],
+        "mainre": [
+            "patrones",
+            "alldef",
+            "outputConsole",
+            "guardar_resultados",
+            "graph"
+        ],
+        "outputConsole": [],
+        "patrones": []
+    },
+    "dependencias_externas": {
+        "alldef": [],
+        "graph": [],
+        "guardar_resultados": [],
+        "mainre": [],
+        "outputConsole": [],
+        "patrones": []
+    },
+    "todos_los_imports": [
+        "alldef",
+        "ast",
+        "graph",
+        "guardar_resultados",
+        "json",
+        "networkx",
+        "os",
+        "outputConsole",
+        "patrones",
+        "pyplot",
+        "re"
+    ],
+    "archivos_del_proyecto": [
+        "alldef.py",
+        "graph.py",
+        "guardar_resultados.py",
+        "mainre.py",
+        "outputConsole.py",
+        "patrones.py"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "importaciones": [
+        "networkx",
+        "pyplot"
+    ],
+    "exportaciones": {
+        "funciones": [
+            "generar_grafico_con_networkx"
+        ],
+        "clases": [],
+        "variables": []
+    }
+}

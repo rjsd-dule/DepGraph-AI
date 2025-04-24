@@ -1,0 +1,19 @@
+{
+    "importaciones": [
+        "patrones",
+        "os",
+        "re",
+        "ast"
+    ],
+    "exportaciones": {
+        "funciones": [
+            "cargar_codigo",
+            "extraer_extension_y_nombre",
+            "obtener_nombre_sin_ruta_ni_extension",
+            "procesar_patrones",
+            "obtener_exportaciones"
+        ],
+        "clases": [],
+        "variables": []
+    }
+}

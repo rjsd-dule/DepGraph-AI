@@ -1,0 +1,10 @@
+{
+    "importaciones": [],
+    "exportaciones": {
+        "funciones": [],
+        "clases": [],
+        "variables": [
+            "PATRONES_POR_EXTENSION"
+        ]
+    }
+}

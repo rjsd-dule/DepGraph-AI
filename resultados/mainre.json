@@ -1,0 +1,19 @@
+{
+    "importaciones": [
+        "json",
+        "os",
+        "patrones",
+        "alldef",
+        "outputConsole",
+        "guardar_resultados",
+        "graph"
+    ],
+    "exportaciones": {
+        "funciones": [
+            "analizar_proyecto",
+            "main"
+        ],
+        "clases": [],
+        "variables": []
+    }
+}

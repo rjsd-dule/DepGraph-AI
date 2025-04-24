@@ -1,0 +1,10 @@
+{
+    "importaciones": [],
+    "exportaciones": {
+        "funciones": [
+            "mostrar_resultados_mejorados"
+        ],
+        "clases": [],
+        "variables": []
+    }
+}

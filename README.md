@@ -80,7 +80,7 @@ python main.py
 
 ---
 
-## Vista del Análisis con LLM
+## LLM Analysis View
 
 > Sample of the file analysis by the LLM model. The code analysis process begins when the graph is closed. Once the analysis is completed, the result is saved in an .md file at the root of the project, named finalanalysis.md
 
@@ -96,7 +96,7 @@ python main.py
 
 ---
 
-## Personalización
+## Customization
 
 - Modify `patrones.py` to add new analysis rules without implementation.
 - Customize the behavior of the language model from `LLM_model/run_analysis.py`.

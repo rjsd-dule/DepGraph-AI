@@ -1,9 +1,9 @@
 import os
 import json
 from typing import Dict
-from config.settings import settings
-from core.analysis_state import AnalysisState
-from core.llm_service import LLMService
+from ..config.settings import settings
+from .analysis_state import AnalysisState
+from .llm_service import LLMService
 
 llm_service = LLMService()
 

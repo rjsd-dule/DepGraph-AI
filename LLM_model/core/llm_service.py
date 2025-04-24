@@ -1,11 +1,14 @@
 import json
+import sys
 from jinja2 import Template
 from langchain_google_genai import ChatGoogleGenerativeAI
-from config.settings import settings
-
+from LLM_model.config.settings import settings
+import os
 class LLMService:
     def __init__(self):
-        with open("config/prompts/build_prompt.jinja2", "r", encoding="utf-8") as f:
+        ruta_base = os.path.dirname(__file__)
+        ruta_archivo = os.path.join(ruta_base, "build_prompt.jinja2")
+        with open(ruta_archivo, "r", encoding="utf-8") as f:
             self.jinja_template = Template(f.read())
         
         self.llm = ChatGoogleGenerativeAI(

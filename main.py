@@ -3,11 +3,16 @@ import os
 import patrones
 import alldef
 import outputConsole
-#from model_LLM.LLM import analyze_code
+import sys
+from pathlib import Path
+#sys.path.append(str(Path(__file__).parent))
+from LLM_model.run_analysis import run_analysis
+
 import sys
 #import guardar_resultados
 from guardar_resultados import guardar_resultados
 import graph
+import matplotlib.pyplot as plt
 
 
 def analizar_proyecto(directorio_base):
@@ -83,6 +88,9 @@ def analizar_proyecto(directorio_base):
             "dependencias_internas"
 
         )
+        run_analysis()
+        plt.show(block=False)
+        plt.pause(0.1)
 
     print("\n=== Resumen del análisis ===")
     print(f"Archivos analizados: {len(archivos_proyecto)}")
@@ -93,7 +101,9 @@ def analizar_proyecto(directorio_base):
 
 def main():
     analizar_proyecto("analyserCode")
-    """response=analyze_code("hola guapo")
+
+   # run_analysis()
+    """response=analyze_code("hello")
 
     if response:
         print("\nGemini:", response, "\n")
